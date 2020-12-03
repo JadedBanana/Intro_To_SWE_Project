@@ -1,0 +1,108 @@
+{
+  "pizzas": {
+    "_styles": ["Normal", "Deep Dish", "Thin Crust"],
+	"_sizes": ["Small", "Medium", "Large", "Extra Large"],
+	"pizzas": [
+		{
+			"name": "Blank",
+			"defaultToppings": [],
+		    "startPrices": [4.19, 6.69, 9.69, 12.69]
+		},
+		{
+			"name": "Cheese",
+		    "defaultToppings": ["Tomato sauce", "Cheese"],
+		    "startPrices": [4.39, 6.89, 9.89, 12.89],
+		},
+	    {
+			"name": "Pepperoni",
+		    "defaultToppings": ["Tomato sauce", "Cheese", "Pepperoni"],
+		    "startPrices": [4.69, 7.19, 10.19, 13.19],
+		},
+	    {
+			"name":"Meat Lover's",
+		    "defaultToppings": ["Tomato sauce", "Cheese", "Pepperoni", "Ham", "Beef"],
+		    "startPrices": [5.39, 7.79, 10.79, 13.79],
+		},
+	    {
+			"name":"Hawaiian",
+		    "defaultToppings": ["Tomato sauce", "Cheese", "Pineapple", "Ham"],
+		    "startPrices": [4.89, 7.29, 10.29, 13.29],
+		}
+	]
+  },
+  
+  "toppings": [
+    { "name": "Cheese", "price": 0.10 },
+    { "name": "Tomato sauce", "price": 0.10 },
+    { "name": "Ham", "price": 0.30 },
+    { "name": "Beef", "price": 0.30 },
+    { "name": "Pepperoni", "price": 0.30 },
+    { "name": "Onions", "price": 0.15 },
+    { "name": "Banana Peppers", "price": 0.15 },
+    { "name": "Green Peppers", "price": 0.15 },
+    { "name": "Mushrooms", "price": 0.20 },
+    { "name": "Pineapple", "price": 0.20 },
+    { "name": "Jalapeno Peppers", "price": 0.30 },
+    { "name": "Olives", "price": 0.20 }
+  ],
+  
+  "sides": [
+    { 
+	  "name": "Bread",
+	  "items": {
+		  "Garlic Knots": 6.99,
+		  "Parmesan Knots": 6.99,
+	      "Cheesy Bread": 4.99
+      }
+	},
+    { 
+	  "name": "Salads",
+      "items": {
+	      "Greek Salad": 7.99,
+	      "Caesar Salad": 5.99,
+	      "Garden Salad": 4.99
+      }
+    },
+    { 
+	  "name": "Drinks",
+	  "_sizes": ["16 oz.", "2 Liter", "Gargantuan"],
+	  "items": {
+	      "Diet Cola": [1.99, 2.39, 3.69],
+	      "Cola": [1.99, 2.39, 3.69],
+	      "Cola Zero": [1.99, 2.39, 3.69],
+	      "Dr. Cherry": [1.99, 2.39, 3.69],
+	      "Lemon-Lime": [1.99, 2.39, 3.69]
+      }
+    },
+	{ 
+	  "name": "Desserts",
+      "items": {
+	      "Yellow Cake": 3.99,
+	      "Chocolate Cake": 3.99,
+	      "Funfetti": 3.99,
+	      "Churros": 4.99,
+	      "Cinnamon Swirls": 3.99,
+	      "Cookies (Assorted)": 2.99
+      }
+    }
+  ],
+  
+  "coupons": {
+    "632729972401": {
+      "description": "Buy 2 medium 2-topping pizzas, get one free",
+      "item": { "type": "pizza", "size": 1, "toppings": 2, "count": 2 },
+      "priceMult": 0.5,
+      "auto": true
+    },
+    "291024977271": {
+      "description": "2 knots sides for $4.99",
+      "item": {
+        "type": "side",
+        "applicableItems": ["Garlic Knots", "Parmesan Knots"],
+        "count": 2
+      },
+      "priceSub": 4.99,
+      "auto": false
+    }
+  }
+}
